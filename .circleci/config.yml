@@ -1,3 +1,4 @@
+version: 1
 dependencies:
   pre:
     - curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > microsoft.gpg
