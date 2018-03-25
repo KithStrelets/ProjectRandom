@@ -13,6 +13,7 @@ namespace ProjectRandom.Models
     public class MongoConnection : IDatabaseConnection
     {
         private static MongoConnection InstanceConnection { get; set; } = null;
+
         private static IMongoDatabase Database { get; set; } = null;
 
         private MongoConnection()
@@ -49,6 +50,7 @@ namespace ProjectRandom.Models
             }
             catch
             {
+                // ToDo: add handler of null receiver on the web-page like "Sorry, we are fixing the connection"
                 return null;
             }
 
