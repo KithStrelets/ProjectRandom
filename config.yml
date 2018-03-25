@@ -10,6 +10,6 @@ dependencies:
 test:
   pre:
     - dotnet --version
-    - dotnet build ./ProjectRandom.sln
+    - dotnet build ./ProjectRandom/ProjectRandom.sln
   override:
     - dotnet test UnitTestProject
