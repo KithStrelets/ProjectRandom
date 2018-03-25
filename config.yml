@@ -12,4 +12,4 @@ test:
     - dotnet --version
     - dotnet build ./ProjectRandom/ProjectRandom.sln
   override:
-    - dotnet test UnitTestProject
+    - dotnet test .ProjectRandom/UnitTestProject/UnitTestProject.csproj
