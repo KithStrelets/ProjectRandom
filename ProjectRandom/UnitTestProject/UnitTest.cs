@@ -29,10 +29,9 @@ namespace UnitTestProject
         public void TestMongoConnectionLoss()
         {
             Console.WriteLine("===Receiving null while connection is unavailable===");
-            if (MongoConnection.GetInstance() != null)
-                Console.WriteLine("\tConnection is available");
-            else Console.WriteLine("\tConnection is UNAVAILABLE");
+            Console.WriteLine(MongoConnection.GetInstance() != null
+                                  ? "\tConnection is available"
+                                  : "\tConnection is UNAVAILABLE");
         }
-
     }
 }
