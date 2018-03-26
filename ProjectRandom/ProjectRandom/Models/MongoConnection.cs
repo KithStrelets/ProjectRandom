@@ -5,7 +5,6 @@ using MongoDB.Driver;
 using MongoDB.Bson;
 using System.Threading.Tasks;
 using System.IO;
-using System.Linq;
 using Newtonsoft.Json;
 
 namespace ProjectRandom.Models
@@ -46,11 +45,13 @@ namespace ProjectRandom.Models
             try
             {
                 if (Database == null || InstanceConnection == null)
+                {
                     InstanceConnection = new MongoConnection();
+                }
             }
             catch
             {
-                // ToDo: add handler of null receiver on the web-page like "Sorry, we are fixing the connection"
+                // ToDo: Add handler of null receiver on the web-page like "Sorry, we are fixing the connection"
                 return null;
             }
 

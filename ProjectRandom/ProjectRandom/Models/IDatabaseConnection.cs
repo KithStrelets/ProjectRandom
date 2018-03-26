@@ -1,7 +1,7 @@
 ﻿namespace ProjectRandom.Models
 {
     // ToDo: Change types of params, add more funcs according to session flow
-    interface IDatabaseConnection
+    public interface IDatabaseConnection
     {
         /// <summary>Get the full list of created room sessions.</summary>
         /// <returns>Json array of sessions.</returns>

@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 
 namespace ProjectRandom.Models
 {
@@ -25,8 +22,6 @@ namespace ProjectRandom.Models
             // ToDo: Complete deserialization of cached object
             return new Session();
         }
-
-
 
         // ToDo: Ensure to save cached copy to database, add destruction of inactive sessions
         ~Session()
