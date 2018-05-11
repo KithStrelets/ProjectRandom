@@ -15,6 +15,7 @@ namespace ProjectRandom.Models
 
         private static IMongoDatabase Database { get; set; } = null;
 
+        // ToDo: password --> char[] --> argon
         private MongoConnection()
         {
             Dictionary<string, string> credits = JsonConvert.DeserializeObject<Dictionary<string, string>>(File.ReadAllText(@"./credits.json"));

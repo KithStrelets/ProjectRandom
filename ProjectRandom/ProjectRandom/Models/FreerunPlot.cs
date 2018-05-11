@@ -1,16 +1,19 @@
-﻿namespace ProjectRandom.Models
+﻿using System.Collections.Generic;
+
+namespace ProjectRandom.Models
 {
     public class FreerunPlot : IPlotMechanics
     {
-        public object CharacterCreation()
+        public object CreateCharacter()
         {
             // ToDo: Complete implementation
             return "Object<Character>";
         }
 
-        public void CharacterChoosing(object[] createdCharacters)
+        public Dictionary<object, object> ChooseCharacter(int numOfVariants)
         {
             // ToDo: Complete implementation
+            return new Dictionary<object, object>();
         }
 
         public void TurnsQueue()
