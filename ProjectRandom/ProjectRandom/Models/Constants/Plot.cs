@@ -1,5 +1,6 @@
-﻿namespace ProjectRandom.Models
+﻿namespace ProjectRandom.Models.Constants
 {
+    // ToDo: Documentation
     enum Plot
     {
         Freerun,

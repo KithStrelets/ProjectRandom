@@ -1,6 +1,7 @@
 using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using ProjectRandom.Models;
+using ProjectRandom.Models.Database;
 
 namespace UnitTestProject
 {

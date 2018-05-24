@@ -1,6 +1,7 @@
-﻿namespace ProjectRandom.Models
+﻿namespace ProjectRandom.Models.Constants
 {
-    enum ItemType
+    // ToDo: Documentation
+    public enum ItemType
     {
         Head, Chest, Arms, Belt, Legs, Weapon,
         Resource, 

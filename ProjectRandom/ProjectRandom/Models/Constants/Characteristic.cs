@@ -1,6 +1,7 @@
-﻿namespace ProjectRandom.Models
+﻿namespace ProjectRandom.Models.Constants
 {
-    enum Characteristic
+    // ToDo: Documentation
+    public enum Characteristic
     {
         Strength,
         Charisma,

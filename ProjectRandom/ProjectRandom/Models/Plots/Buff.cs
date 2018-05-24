@@ -2,8 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using ProjectRandom.Models.Constants;
 
-namespace ProjectRandom.Models
+namespace ProjectRandom.Models.Plots
 {
     // ToDo: 1. Make props readonly
     //       2. Add methods for readonly props
@@ -19,8 +20,20 @@ namespace ProjectRandom.Models
 
         string buffDescription;
 
-        Characteristic? buffSpecialization;
+        Constants.Characteristic? buffSpecialization;
 
+        // ToDo: Make Buff set countable to hold the sum of buffs and debuffs
         int buffValue;
+
+
+        public string BuffName => buffName;
+
+        public object BuffPicture => buffPicture;
+
+        public string BuffDescription => buffDescription;
+
+        public Characteristic? BuffSpecialization => buffSpecialization; 
+
+        public int BuffValue => buffValue; 
     }
 }

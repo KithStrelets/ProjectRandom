@@ -1,4 +1,4 @@
-﻿namespace ProjectRandom.Models
+﻿namespace ProjectRandom.Models.Database
 {
     // ToDo: Change types of params, add more funcs according to session flow
     public interface IDatabaseConnection

@@ -6,8 +6,9 @@ using MongoDB.Bson;
 using System.Threading.Tasks;
 using System.IO;
 using Newtonsoft.Json;
+using ProjectRandom.Models.Plots;
 
-namespace ProjectRandom.Models
+namespace ProjectRandom.Models.Database
 {
     public class MongoConnection : IDatabaseConnection
     {
@@ -87,6 +88,13 @@ namespace ProjectRandom.Models
         {
             // ToDo: Complete implementation and rewrite into async task
             return "Object<Skill>";
+        }
+
+        public Race GetRandomRace()
+        {
+            // ToDo: Complete implementation and rewrite into async task
+            //       And think about memory costs of such return
+            return new Race();
         }
     }
 }

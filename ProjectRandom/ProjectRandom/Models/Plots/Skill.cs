@@ -1,20 +1,11 @@
-﻿using System;
+﻿using ProjectRandom.Models.Constants;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace ProjectRandom.Models
+namespace ProjectRandom.Models.Plots
 {
-    // A mirror of characteristics
-    //enum SkillTypes
-    //{
-    //    Strength,
-    //    Charisma,
-    //    Intelligence,
-    //    Agility,
-    //    Luck
-    //}
-
     // ToDo: 1. Make props readonly
     //       2. Add methods for readonly props
     //       3. Add documentation
@@ -27,6 +18,15 @@ namespace ProjectRandom.Models
 
         string skillDescription;
 
+        // A mirror of characteristics
         Characteristic skillType;
+
+        public string SkillName => skillName;
+
+        public object SkillPicture => skillPicture;
+
+        public string SkillDescription => skillDescription;
+
+        public Characteristic SkillType => skillType;
     }
 }

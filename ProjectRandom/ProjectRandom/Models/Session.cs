@@ -1,5 +1,8 @@
-﻿using System;
+﻿using ProjectRandom.Models.Constants;
+using System;
 using System.Collections.Generic;
+using ProjectRandom.Models.Plots.Freerun;
+using ProjectRandom.Models.Plots;
 
 namespace ProjectRandom.Models
 {
@@ -10,6 +13,12 @@ namespace ProjectRandom.Models
 
     public class Session
     {
+        // ToDo: Documentation
+        Guid sessionId;
+
+        SessionState state;
+
+        // ToDo: Think about GM role realization --> need an empty obj?
         /// <summary>Roles of users (GM or player).</summary>
         Dictionary<object, object> inSessionUsers;
 
@@ -18,12 +27,15 @@ namespace ProjectRandom.Models
 
         private void SelectSessionPlotMechanics(Plot plot)
         {
-            sessionPlot = (plot == Plot.Freerun) ? new FreerunPlot() :
-                          //(plot == Plot.Medieval) ? new MedievalPlot() :
-                          //(plot == Plot.Cyberpunk) ? new CyberpunkPlot() :
-        // ToDo: Replace exception throw with smth else
-                          throw new Exception("Error! Unimplemented plot or missing a value.");
+            sessionPlot = (plot == Plot.Freerun) ? new FreerunPlot(inSessionUsers) :
+                          //(plot == Plot.Medieval) ? new MedievalPlot(inSessionUsers) :
+                          //(plot == Plot.Cyberpunk) ? new CyberpunkPlot(inSessionUsers) :
+                          
+                          // ToDo: Replace exception throw with smth else
+                          throw new Exception("Error! Unimplemented plot or a missing value.");
         }
+
+        
 
         /// <summary>Load a cached session from memory (or from a local path).</summary>
         /// <returns>Session saved state.</returns>
