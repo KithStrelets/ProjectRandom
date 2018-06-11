@@ -9,7 +9,8 @@
 
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.5" />
-    <PackageReference Include="MongoDB.Driver" Version="2.5.0" />
+    <PackageReference Include="Microsoft.AspNetCore.SignalR" Version="1.0.0" />
+    <PackageReference Include="MongoDB.Driver" Version="2.6.1" />
   </ItemGroup>
 
   <ItemGroup>
@@ -19,6 +20,10 @@
   <ItemGroup>
     <!-- Files not to publish (note that the 'dist' subfolders are re-added below) -->
     <Content Remove="ClientApp\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="PersonnelDiagram.cd" />
   </ItemGroup>
 
   <ItemGroup>

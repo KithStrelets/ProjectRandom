@@ -2,11 +2,13 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.SignalR;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.SpaServices.Webpack;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using ProjectRandom.Models;
 
 namespace ProjectRandom
 {
@@ -23,6 +25,7 @@ namespace ProjectRandom
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc();
+            services.AddSignalR();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -42,6 +45,12 @@ namespace ProjectRandom
             }
 
             app.UseStaticFiles();
+
+            app.UseSignalR(routes =>
+            {
+                // ToDo: Customize with session id
+                routes.MapHub<TabletopHub>("/session");
+            });
 
             app.UseMvc(routes =>
             {

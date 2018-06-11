@@ -14,6 +14,7 @@ namespace ProjectRandom.Models
     public class Session
     {
         // ToDo: Documentation
+        // May become useless
         Guid sessionId;
 
         SessionState state;
